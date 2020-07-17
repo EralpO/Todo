@@ -1,17 +1,23 @@
-﻿@model List<Todo.Web.Models.ClientViewModel>
+﻿@model List<ClientViewModel>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-@Html.Partial("CategoryView")
+@*@Html.Partial("CategoryView")*@
 
-    <p>Tempdata = @TempData["isim"]</p>
+<partial name="CategoryView"/>
 
-    <h2>Modelden gelen data</h2>
-    @foreach (var item in Model)
-    {
-        <p>@item.name</p>
-    }
+<sectionhelper data="mustafa"></sectionhelper>
+
+    <a asp-controller="Home" asp-action="Index" asp-route-id="1">content</a>
+
+<p>Tempdata = @TempData["isim"]</p>
+
+<h2>Modelden gelen data</h2>
+@foreach (var item in Model)
+{
+    <p>@item.name</p>
+}
 
