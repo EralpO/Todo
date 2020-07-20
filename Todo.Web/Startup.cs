@@ -28,6 +28,7 @@ namespace Todo.Web
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

@@ -4,20 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<p class="text-danger lead"> Home Page</p>
 
 @*@Html.Partial("CategoryView")*@
 
-<partial name="CategoryView"/>
+@*<partial name="CategoryView"/>
 
 <sectionhelper data="mustafa"></sectionhelper>
 
-    <a asp-controller="Home" asp-action="Index" asp-route-id="1">content</a>
+    <a asp-controller="Home" asp-action="Index" asp-route-id="1">content</a>*@
+
+@await Component.InvokeAsync("Products") 
 
 <p>Tempdata = @TempData["isim"]</p>
 
 <h2>Modelden gelen data</h2>
-@foreach (var item in Model)
-{
-    <p>@item.name</p>
-}
-

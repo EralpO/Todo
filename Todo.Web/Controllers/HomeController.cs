@@ -12,14 +12,7 @@ namespace Todo.Web.Controllers
         public IActionResult Index()
         {
             TempData["isim"] = "eralp";
-            return View(new List<ClientViewModel>() { 
-            new ClientViewModel(){name="eralp"},
-            new ClientViewModel(){name="ahmet"},
-            new ClientViewModel(){name="mehmet"}
-
-
-
-            });
+            return View();
         }
     }
 }
