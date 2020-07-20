@@ -1,0 +1,24 @@
+﻿@model ClientViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="w-50 mx-auto mt-5" method="post" asp-action="Register2">
+        <input type="text" asp-for="username" class="form-control" name="username" value="" />
+        <span asp-validation-for="username" class="alert-danger"></span>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="~/jquery/jquery.min.js"></script>
+    <script src="~/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>

@@ -14,5 +14,18 @@ namespace Todo.Web.Controllers
             TempData["isim"] = "eralp";
             return View();
         }
+
+        
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register2(ClientViewModel user)
+        {
+            
+            return View();
+        }
+
     }
 }

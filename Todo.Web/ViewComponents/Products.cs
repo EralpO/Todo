@@ -13,9 +13,9 @@ namespace Todo.Web.ViewComponents
         public IViewComponentResult Invoke()
         {
             return View("ProductViewComponent",new List<ClientViewModel>() {
-            new ClientViewModel(){name="eralp"},
-            new ClientViewModel(){name="ahmet"},
-            new ClientViewModel(){name="mehmet"} });
+            new ClientViewModel(){username="eralp"},
+            new ClientViewModel(){username="ahmet"},
+            new ClientViewModel(){username="mehmet"} });
         }
     }
 }
