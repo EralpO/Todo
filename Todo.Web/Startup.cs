@@ -17,6 +17,7 @@ namespace Todo.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,9 +27,19 @@ namespace Todo.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseStatusCodePagesWithReExecute("/Home/PageError", "?code={0}");
 
             app.UseRouting();
+            //app.UseStatusCodePages();
+
             app.UseStaticFiles();
+
+         
 
             app.UseEndpoints(endpoints =>
             {
